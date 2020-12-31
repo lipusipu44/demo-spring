@@ -8,11 +8,13 @@ public class BinarySearchImpl {
 	
 	@Autowired
 	private SortingAlgo sortingAlgo;
-
-	public BinarySearchImpl(SortingAlgo sortingAlgo) {
+	
+	public void setSortingAlgo(SortingAlgo sortingAlgo) {
 		this.sortingAlgo = sortingAlgo;
 	}
-	
+
+
+
 	public int binarySearch(int[] arr) {
 		sortingAlgo.sort(arr);
 		System.out.println("Execution of binarySearch completed");

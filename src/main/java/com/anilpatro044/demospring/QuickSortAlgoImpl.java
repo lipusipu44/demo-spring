@@ -1,5 +1,10 @@
 package com.anilpatro044.demospring;
 
+import org.springframework.context.annotation.Primary;
+import org.springframework.stereotype.Component;
+
+@Component
+@Primary
 public class QuickSortAlgoImpl implements SortingAlgo{
 
 	@Override

@@ -1,5 +1,8 @@
 package com.anilpatro044.demospring;
 
+import org.springframework.stereotype.Component;
+
+@Component
 public class BubbleSortAlgoImpl implements SortingAlgo{
 
 	@Override

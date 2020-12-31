@@ -1,8 +1,13 @@
 package com.anilpatro044.demospring;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+
+@Component
 public class BinarySearchImpl {
 	
-	SortingAlgo sortingAlgo;
+	@Autowired
+	private SortingAlgo sortingAlgo;
 
 	public BinarySearchImpl(SortingAlgo sortingAlgo) {
 		this.sortingAlgo = sortingAlgo;

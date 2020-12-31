@@ -8,7 +8,7 @@ public class DemoSpringApplication {
 
 	public static void main(String[] args) {
 		BinarySearchImpl binarySearchImpl=new BinarySearchImpl(new QuickSortAlgoImpl());
-		binarySearchImpl.binarySearch(new int[] {12,3,5});
+		binarySearchImpl.binarySearch(new int[] {12,3,7});
 		//SpringApplication.run(DemoSpringApplication.class, args);
 	}
 

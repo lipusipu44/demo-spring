@@ -1,8 +1,10 @@
 package com.anilpatro044.demospring;
 
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
 @Component
+@Qualifier("bubble")
 public class BubbleSortAlgoImpl implements SortingAlgo{
 
 	@Override

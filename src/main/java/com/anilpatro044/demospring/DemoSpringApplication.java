@@ -11,20 +11,20 @@ public class DemoSpringApplication {
 	/* 
 	 * what are beans - @component, @primary
 	 * What are the dependencies for that bean - @autoweired
-	 * This case we have removed primary and used the name as injection
+	 * This case we have removed primary and used qualifier as injection
 	 * Where to Search for beans
 	 */
 
 	/*
 	 * Spring applicationcontext would maintain all the beans,
-	 * this case we are using @primary to define primary component
+	 * this case we are using @qualifier to define primary component
 	 */
 	public static void main(String[] args) {
 
 		//ApplicationContext
 
-		ApplicationContext applicationContext = SpringApplication.run(DemoSpringApplication.class, args);
-
+		ApplicationContext applicationContext = SpringApplication.run(DemoSpringApplication.class);
+		
 		BinarySearchImpl binarySearchImpl = applicationContext.getBean(BinarySearchImpl.class);
 
 		binarySearchImpl.binarySearch(new int[] {12,3,7});

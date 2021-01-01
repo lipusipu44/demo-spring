@@ -1,22 +1,24 @@
 package com.anilpatro044.demospring;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
 @Component
 public class BinarySearchImpl {
 	
 	@Autowired
-	private SortingAlgo quickSortAlgoImpl;
+	@Qualifier("bubble")
+	private SortingAlgo sortAlgoImpl;
 	
 	public void setSortingAlgo(SortingAlgo sortingAlgo) {
-		this.quickSortAlgoImpl = sortingAlgo;
+		this.sortAlgoImpl = sortingAlgo;
 	}
 
 
 
 	public int binarySearch(int[] arr) {
-		quickSortAlgoImpl.sort(arr);
+		sortAlgoImpl.sort(arr);
 		System.out.println("Execution of binarySearch completed");
 		return 3;
 	}

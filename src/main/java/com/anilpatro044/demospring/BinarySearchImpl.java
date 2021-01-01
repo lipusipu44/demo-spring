@@ -7,16 +7,16 @@ import org.springframework.stereotype.Component;
 public class BinarySearchImpl {
 	
 	@Autowired
-	private SortingAlgo sortingAlgo;
+	private SortingAlgo quickSortAlgoImpl;
 	
 	public void setSortingAlgo(SortingAlgo sortingAlgo) {
-		this.sortingAlgo = sortingAlgo;
+		this.quickSortAlgoImpl = sortingAlgo;
 	}
 
 
 
 	public int binarySearch(int[] arr) {
-		sortingAlgo.sort(arr);
+		quickSortAlgoImpl.sort(arr);
 		System.out.println("Execution of binarySearch completed");
 		return 3;
 	}

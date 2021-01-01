@@ -11,7 +11,7 @@ public class DemoSpringApplication {
 	/* 
 	 * what are beans - @component, @primary
 	 * What are the dependencies for that bean - @autoweired
-	 * This case we have used setter injection instead of constructor
+	 * This case we have removed primary and used the name as injection
 	 * Where to Search for beans
 	 */
 

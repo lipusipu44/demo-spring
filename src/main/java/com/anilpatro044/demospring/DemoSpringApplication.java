@@ -3,29 +3,27 @@ package com.anilpatro044.demospring;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
-import org.springframework.context.ConfigurableApplicationContext;
 
 @SpringBootApplication
 public class DemoSpringApplication {
 
 	/* 
-	 * what are beans - @component, @primary
-	 * What are the dependencies for that bean - @autoweired
-	 * This case we have removed primary and used qualifier as injection
-	 * Where to Search for beans
+	 * In this step we will check about singleton and prototype
+	 * of bean
 	 */
 
-	/*
-	 * Spring applicationcontext would maintain all the beans,
-	 * this case we are using @qualifier to define primary component
-	 */
+	
 	public static void main(String[] args) {
 
 		//ApplicationContext
 
-		ApplicationContext applicationContext = SpringApplication.run(DemoSpringApplication.class);
+		ApplicationContext applicationContext = SpringApplication.run(DemoSpringApplication.class,args);
 		
 		BinarySearchImpl binarySearchImpl = applicationContext.getBean(BinarySearchImpl.class);
+		
+		BinarySearchImpl binarySearchImpl1 = applicationContext.getBean(BinarySearchImpl.class);
+		
+		System.out.println(binarySearchImpl==binarySearchImpl1);
 
 		binarySearchImpl.binarySearch(new int[] {12,3,7});
 	}

@@ -4,12 +4,13 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
 
+import com.anilpatro044.demospring.simple.BinarySearchImpl;
+
 @SpringBootApplication
 public class DemoSpringApplication {
 
 	/* 
-	 * In this step we will check about singleton and prototype
-	 * of bean
+	 * 
 	 */
 
 	

@@ -1,4 +1,4 @@
-package com.anilpatro044.demospring;
+package com.anilpatro044.demospring.simple;
 
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Primary;
